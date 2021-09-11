@@ -8,6 +8,11 @@
         {% for note in notes %}
             {% include "note.html" %}
         {% endfor %}
+        {% block noticias %}
+            {% for note in notes %}
+                <h1>{{ note.title }}{{ note.text }}||</h1>
+            {% endfor %}
+        {% endblock %}
     </div>
     {% include "add_note.html" %}
 {% endblock %}
